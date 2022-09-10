@@ -1,13 +1,13 @@
-package dto
+package validations
 
-type BookUpdateDTO struct {
+type BookUpdateValidation struct {
 	ID          uint64 `json:"id" form:"id" binding:"required"`
 	Title       string `json:"title" form:"title" binding:"required"`
 	Description string `json:"description" form:"description" binding:"required"`
 	UserID      uint16 `json:"user_id,omitempty" form:"user_id,omitempty"`
 }
 
-type BookCreateDTO struct {
+type BookCreateValidation struct {
 	Title       string `json:"title" form:"title" binding:"required"`
 	Description string `json:"description" form:"description" binding:"required"`
 	UserID      uint16 `json:"user_id,omitempty" form:"user_id,omitempty"`

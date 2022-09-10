@@ -3,7 +3,7 @@ package repository
 import (
 	"log"
 
-	models "github.com/johnkeychishugi/golang-api/Models"
+	"github.com/johnkeychishugi/golang-api/models"
 	"golang.org/x/crypto/bcrypt"
 	"gorm.io/gorm"
 )
