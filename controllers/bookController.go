@@ -70,7 +70,7 @@ func (c *bookController) Insert(context *gin.Context) {
 		convertedUserID, err := strconv.ParseUint(userID, 10, 64)
 
 		if err == nil {
-			bookCreateValidation.UserID = uint16(convertedUserID)
+			bookCreateValidation.UserID = uint64(convertedUserID)
 		}
 
 		result := c.bookService.Insert(bookCreateValidation)
@@ -102,7 +102,7 @@ func (c *bookController) Update(context *gin.Context) {
 			id, errID := strconv.ParseUint(userID, 10, 64)
 
 			if errID == nil {
-				bookUpdateValidation.UserID = uint16(id)
+				bookUpdateValidation.UserID = uint64(id)
 			}
 
 			result := c.bookService.Update(bookUpdateValidation)
